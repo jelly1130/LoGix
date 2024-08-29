@@ -1,0 +1,10 @@
+.DS_Store
+
+dataset
+checkpoints
+test_results
+logs
+result_anomaly_detection.txt
+
+__pycache__
+*.pyc
