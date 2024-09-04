@@ -102,14 +102,9 @@ parser.add_argument('--mlp', type=int, default=0)
 parser.add_argument('--weight', type=float, default=0)
 parser.add_argument('--percent', type=int, default=5)
 
-# args for tsla
-parser.add_argument('--depth', type=int, default=2, help='depth of tsla net')
-parser.add_argument('--ASB', type=bool, default=True)
-parser.add_argument('--ICB', type=bool, default=True)
-parser.add_argument('--adaptive_filter', type=bool, default=True)
-
-# args for hybridmixere
-parser.add_argument('--num_scales', type=int, default=2, help='depth of hybrid mixer')
+# args for LoGix
+parser.add_argument('--depth', type=int, default=2, help='depth of LoGix')
+parser.add_argument('--num_scales', type=int, default=2, help='depth of LoGix')
 
 args = parser.parse_args()
 args.use_gpu = True if torch.cuda.is_available() and args.use_gpu else False

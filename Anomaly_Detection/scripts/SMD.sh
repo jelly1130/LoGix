@@ -5,7 +5,7 @@ python -u run.py \
   --is_training 1 \
   --root_path ./dataset/SMD \
   --model_id SMD \
-  --model HybridMixerE \
+  --model LoGix \
   --data SMD \
   --features M \
   --seq_len 100 \

@@ -113,7 +113,7 @@ class GlobalMixerNG(nn.Module):
         return x
 
 
-class HybridMixer_layer(nn.Module):
+class LoGix_layer(nn.Module):
     def __init__(self, dim, num_patches, device, num_scales, mlp_ratio=3., drop=0., drop_path=0., norm_layer=nn.LayerNorm):
         super().__init__()
         mlp_hidden_dim = int(dim * mlp_ratio)
@@ -152,7 +152,7 @@ class Model(nn.Module):
         dpr = [x.item() for x in torch.linspace(0, args.dropout, args.depth)]  # stochastic depth decay rule
 
         self.mixer_blocks = nn.ModuleList([
-            HybridMixer_layer(dim=args.emb_dim, num_patches=num_patches, drop=args.dropout, drop_path=dpr[i], device=device, num_scales=args.num_scales)
+            LoGix_layer(dim=args.emb_dim, num_patches=num_patches, drop=args.dropout, drop_path=dpr[i], device=device, num_scales=args.num_scales)
             for i in range(args.depth)]
         )
 

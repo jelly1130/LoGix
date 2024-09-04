@@ -5,7 +5,7 @@ python -u run.py \
   --is_training 1 \
   --root_path ./dataset/SMAP \
   --model_id SMAP \
-  --model HybridMixerE \
+  --model LoGix \
   --data SMAP \
   --features M \
   --seq_len 100 \
