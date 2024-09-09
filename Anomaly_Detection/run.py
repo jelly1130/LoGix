@@ -131,7 +131,7 @@ elif args.task_name == 'classification':
 else:
     Exp = Exp_Long_Term_Forecast
     
-# add some args for tslanet
+# add some args for Logix
 
 train_data, train_loader = data_provider(args, flag='train')
 args.num_channels = train_loader.dataset.train.shape[1]
